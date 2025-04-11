@@ -1,0 +1,1740 @@
+2025-04-06 16:12:09 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:12:09 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:12:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:12:09 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:12:09 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:12:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:16:51 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:16:51 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'admin', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'admin'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:16:51 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:16:52 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:16:52 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'admin', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'admin'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:16:52 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:45 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:45 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:45 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:45 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:46 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:46 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:46 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:46 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:46 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:46 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:47 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:47 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:47 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:51 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:51 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:51 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:18:52 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:18:52 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'cozexuser', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'cozexuser'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'cozexuser'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:18:52 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:58:47 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:58:47 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:58:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:58:47 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:58:47 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:58:47 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:58:49 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:58:49 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:58:49 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:58:50 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:58:50 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:58:50 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:59:14 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:59:14 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:59:14 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:59:15 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:59:15 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:59:15 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:59:15 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:59:15 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:59:15 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
+2025-04-06 16:59:16 [::1][-][-][error][application] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:60
+    in E:\cozex-main\src\bootstrap\ExceptionLog.php:67
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:71
+2025-04-06 16:59:16 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:722
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(722): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(637): yii\db\Connection->createPdoInstance()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#18 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#21 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#22 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#23 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#24 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#28 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#29 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php:648
+Stack trace:
+#0 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1067): yii\db\Connection->open()
+#1 E:\cozex-main\src\vendor\yiisoft\yii2\db\Connection.php(1054): yii\db\Connection->getMasterPdo()
+#2 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo(true)
+#3 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(1181): yii\db\Command->prepare(true)
+#4 E:\cozex-main\src\vendor\yiisoft\yii2\db\Command.php(417): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(366): yii\db\Command->queryAll()
+#6 E:\cozex-main\src\vendor\yiisoft\yii2\db\mysql\Schema.php(134): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(756): yii\db\mysql\Schema->loadTableSchema('cozex_option')
+#8 E:\cozex-main\src\vendor\yiisoft\yii2\db\Schema.php(192): yii\db\Schema->getTableMetadata('{{%option}}', 'schema', false)
+#9 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(439): yii\db\Schema->getTableSchema('{{%option}}')
+#10 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(266): yii\db\ActiveRecord::getTableSchema()
+#11 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(238): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\cozex-main\src\vendor\yiisoft\yii2\db\ActiveRecord.php(195): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\cozex-main\src\vendor\yiisoft\yii2\db\BaseActiveRecord.php(110): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\cozex-main\src\forms\common\CommonOption.php(70): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\cozex-main\src\forms\mall\setting\ConfigForm.php(62): app\forms\common\CommonOption::get('ind_setting', 'admin')
+#16 E:\cozex-main\src\views\mall\passport\login.php(8): app\forms\mall\setting\ConfigForm->config()
+#17 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(348): require('E:\\cozex-main\\s...')
+#18 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(258): yii\base\View->renderPhpFile('E:\\cozex-main\\s...', Array)
+#19 E:\cozex-main\src\vendor\yiisoft\yii2\base\View.php(157): yii\base\View->renderFile('E:\\cozex-main\\s...', Array, Object(app\controllers\mall\PassportController))
+#20 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('login', Array, Object(app\controllers\mall\PassportController))
+#21 E:\cozex-main\src\controllers\mall\PassportController.php(34): yii\base\Controller->render('login', Array)
+#22 [internal function]: app\controllers\mall\PassportController->actionLogin()
+#23 E:\cozex-main\src\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\cozex-main\src\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#25 E:\cozex-main\src\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('login', Array)
+#26 E:\cozex-main\src\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('mall/passport/l...', Array)
+#27 E:\cozex-main\src\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\cozex-main\src\web\index.php(13): yii\base\Application->run()
+#29 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1045
+    [2] => Access denied for user 'root'@'localhost' (using password: YES)
+)
+
+    in E:\cozex-main\src\bootstrap\ErrorHandler.php:74
+2025-04-06 16:59:16 [::1][-][-][info][application] $_GET = [
+    'r' => 'mall/passport/login'
+]
+
+$_POST = []
+
+$_FILES = []
