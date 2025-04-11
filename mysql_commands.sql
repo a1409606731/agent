@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS cozex CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE USER IF NOT EXISTS 'cozex'@'localhost' IDENTIFIED BY 'cozex';
+GRANT ALL PRIVILEGES ON cozex.* TO 'cozex'@'localhost';
+FLUSH PRIVILEGES;

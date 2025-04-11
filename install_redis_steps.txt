@@ -1,0 +1,22 @@
+PHP Redis扩展安装步骤
+
+1. 下载Redis扩展
+   访问https://windows.php.net/downloads/pecl/releases/redis/
+   选择与您PHP 8.4.5兼容的最新版本的Redis扩展
+   根据前面的测试，您的PHP版本是64位且线程安全(TS)版本，因此需要下载类似"php_redis-5.3.7-8.4-ts-x64.zip"的文件
+
+2. 安装Redis扩展
+   - 解压下载的zip文件
+   - 找到php_redis.dll文件
+   - 将此文件复制到PHP扩展目录：H:\php-8.4.5-Win32-vs17-x64\ext\
+
+3. 配置Redis服务器
+   - 下载Redis for Windows: https://github.com/tporadowski/redis/releases
+   - 安装并启动Redis服务
+
+4. 运行Web应用
+   - 使用我们创建的php.ini文件：
+     H:\php-8.4.5-Win32-vs17-x64\php.exe -c "E:\cozex-main\src\php.ini" -S localhost:8080 -t web
+
+5. 确认所有扩展已正确加载：
+   H:\php-8.4.5-Win32-vs17-x64\php.exe -c "E:\cozex-main\src\php.ini" -r "echo '必要扩展状态：' . PHP_EOL; echo 'fileinfo: ' . (extension_loaded('fileinfo') ? '已加载' : '未加载') . PHP_EOL; echo 'mbstring: ' . (extension_loaded('mbstring') ? '已加载' : '未加载') . PHP_EOL; echo 'pdo_mysql: ' . (extension_loaded('pdo_mysql') ? '已加载' : '未加载') . PHP_EOL; echo 'curl: ' . (extension_loaded('curl') ? '已加载' : '未加载') . PHP_EOL; echo 'openssl: ' . (extension_loaded('openssl') ? '已加载' : '未加载') . PHP_EOL; echo 'mysqli: ' . (extension_loaded('mysqli') ? '已加载' : '未加载') . PHP_EOL; echo 'redis: ' . (extension_loaded('redis') ? '已加载' : '未加载') . PHP_EOL;" 
